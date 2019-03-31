@@ -110,32 +110,6 @@
 			</div>
 			</div>
 
-			<script type="text/javascript">
-
-			var options = {
-
-				url: function(phrase) {
-				return "https://site-capa.homolog.viajanet.com.br/resources/api/Autocomplete/"+ phrase +"";
-				},
-				dataType: "xml",
-				minCharNumber: 3,
-				xmlElementName: "Location",
-				getValue: function(element) {
-					return $(element).find("Name").text();
-				},
-				list: {
-					match: {
-						enabled: true
-					}
-				},
-			  	requestDelay: 200
-
-			};
-
-			$("#validationCustom01").easyAutocomplete(options);
-
-			</script>
-
 			<div class="col-md-6 mb-6">
 			<label for="validationCustom02">Destino</label>
 			<input type="text" class="form-control" id="validationCustom02" placeholder="Cidade ou Aeroporto" required>
@@ -144,34 +118,7 @@
 			</div>
 			</div>
 
-			<script type="text/javascript">
-
-			var options = {
-
-				url: function(phrase) {
-				return "https://site-capa.homolog.viajanet.com.br/resources/api/Autocomplete/"+ phrase +"";
-				},
-				dataType: "xml",
-				minCharNumber: 3,
-				xmlElementName: "Location",
-				getValue: function(element) {
-					return $(element).find("Name").text();
-				},
-				list: {
-					match: {
-						enabled: true
-					}
-				},
-			  	requestDelay: 200
-
-			};
-
-			$("#validationCustom02").easyAutocomplete(options);
-
-			</script>
-
 			</div>
-
 			<br>
 			
 			<div class="form-row">
@@ -240,27 +187,6 @@
 
 			</form>
 
-			<script>
-
-			(function() {
-			'use strict';
-			window.addEventListener('load', function() {
-				
-				var forms = document.getElementsByClassName('needs-validation');
-				var validation = Array.prototype.filter.call(forms, function(form) {
-					form.addEventListener('submit', function(event) {
-						if (form.checkValidity() === false) {
-			  				event.preventDefault();
-			  				event.stopPropagation();
-						}
-						form.classList.add('was-validated');
-						}, false);
-					});
-				}, false);
-			})();
-
-			</script>
-
 		  </div>
 		</div>
 
@@ -282,8 +208,26 @@
 		  }
 		}
 
+		(function() {
+		'use strict';
+		window.addEventListener('load', function() {
+			
+			var forms = document.getElementsByClassName('needs-validation');
+			var validation = Array.prototype.filter.call(forms, function(form) {
+				form.addEventListener('submit', function(event) {
+					if (form.checkValidity() === false) {
+		  				event.preventDefault();
+		  				event.stopPropagation();
+					}
+					form.classList.add('was-validated');
+					}, false);
+				});
+			}, false);
+		})();
+
     </script>
 
+	<script src="./js/app.js" crossorigin="anonymous"></script>
 	<script src="./js/popper.min.js" crossorigin="anonymous"></script>
 	<script src="./js/bootstrap.min.js" crossorigin="anonymous"></script>
 
