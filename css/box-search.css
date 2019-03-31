@@ -1,0 +1,129 @@
+.form-check-label {
+    margin-bottom: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.easy-autocomplete input {
+    border-color: #ccc;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+    color: #555;
+    float: none;
+    padding: 6px 12px;
+    font-size: 15px;
+    line-height: 26px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    font-size: 15px;
+    line-height: 26px;
+}
+
+.btn-warning {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+    padding: 14px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 2rem;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #fff;
+    background-color: #006ac5;
+    border-color: #006ac5 #006ac5 #006ac5;
+}
+
+.tab-content .tab-pane {
+  background-color: #006ac5;
+  padding:30px;
+  border-color: #006ac5 #006ac5 #006ac5;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #006ac5;
+}
+
+.dvPulsate {
+    -webkit-animation: dvPulsate .8s infinite cubic-bezier(.53, .22, .85, .58) alternate;
+    animation: dvPulsate .8s infinite cubic-bezier(.53, .22, .85, .58) alternate
+}
+
+@-webkit-keyframes dvPulsate {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: cubic-bezier(.53, .22, .85, .58);
+        animation-timing-function: cubic-bezier(.53, .22, .85, .58);
+        opacity: 1
+    }
+    to {
+        -webkit-transform: scale(.95);
+        transform: scale(.95);
+        -webkit-animation-timing-function: cubic-bezier(.53, .22, .85, .58);
+        animation-timing-function: cubic-bezier(.53, .22, .85, .58);
+        opacity: .75
+    }
+}
+
+/* LogoPulse */
+
+@keyframes dvPulsate {
+    from {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-animation-timing-function: cubic-bezier(.53, .22, .85, .58);
+        animation-timing-function: cubic-bezier(.53, .22, .85, .58);
+        opacity: 1
+    }
+    to {
+        -webkit-transform: scale(.95);
+        transform: scale(.95);
+        -webkit-animation-timing-function: cubic-bezier(.53, .22, .85, .58);
+        animation-timing-function: cubic-bezier(.53, .22, .85, .58);
+        opacity: .75
+    }
+}
