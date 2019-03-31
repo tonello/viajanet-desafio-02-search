@@ -179,7 +179,7 @@
 			<label>Origem</label>
 			<input type="text" class="form-control" id="validationCustom01" name="origem" placeholder="Cidade ou Aeroporto" required>
 			<div class="valid-feedback">
-			Looks good!
+			Enviado com sucesso!
 			</div>
 			</div>
 
@@ -213,7 +213,7 @@
 			<label for="validationCustom02">Destino</label>
 			<input type="text" class="form-control" id="validationCustom02" placeholder="Cidade ou Aeroporto" required>
 			<div class="valid-feedback">
-			Looks good!
+			Enviado com sucesso!
 			</div>
 			</div>
 
@@ -253,7 +253,7 @@
 			<label for="validationCustom03">Data de Ida</label>
 			<input type="text" class="form-control" id="validationCustom03" placeholder="Escolha a data..." required>
 			<div class="invalid-feedback">
-			Please provide a valid city.
+			Escolha uma data de ida.
 			</div>
 			</div>
 
@@ -261,7 +261,7 @@
 			<label for="validationCustom03">Data de Volta</label>
 			<input type="text" class="form-control" id="validationCustom03" placeholder="Escolha a data..." required>
 			<div class="invalid-feedback">
-			Please provide a valid city.
+			Escolha uma data de volta.
 			</div>
 			</div>
 
@@ -275,7 +275,7 @@
 		      <option>5</option>
 		    </select>
 		    <div class="invalid-feedback">
-			Please provide a valid state.
+			Quantos adultos?
 			</div>
 			</div>
 
@@ -287,8 +287,9 @@
 		      <option>3</option>
 		      <option>4</option>
 		      <option>5</option>
-		    </select>			<div class="invalid-feedback">
-			Please provide a valid state.
+		    </select>
+		    <div class="invalid-feedback">
+			Quantas crianças?
 			</div>
 			</div>
 
@@ -302,7 +303,7 @@
 		      <option>5</option>
 		    </select>
 		    <div class="invalid-feedback">
-			Please provide a valid zip.
+			Quantos bebês?
 			</div>
 			</div>
 
@@ -313,24 +314,24 @@
 			</form>
 
 			<script>
-			// Example starter JavaScript for disabling form submissions if there are invalid fields
+
 			(function() {
 			'use strict';
 			window.addEventListener('load', function() {
-			// Fetch all the forms we want to apply custom Bootstrap validation styles to
-			var forms = document.getElementsByClassName('needs-validation');
-			// Loop over them and prevent submission
-			var validation = Array.prototype.filter.call(forms, function(form) {
-			form.addEventListener('submit', function(event) {
-			if (form.checkValidity() === false) {
-			  event.preventDefault();
-			  event.stopPropagation();
-			}
-			form.classList.add('was-validated');
-			}, false);
-			});
-			}, false);
+				
+				var forms = document.getElementsByClassName('needs-validation');
+				var validation = Array.prototype.filter.call(forms, function(form) {
+					form.addEventListener('submit', function(event) {
+						if (form.checkValidity() === false) {
+			  				event.preventDefault();
+			  				event.stopPropagation();
+						}
+						form.classList.add('was-validated');
+						}, false);
+					});
+				}, false);
 			})();
+
 			</script>
 
 		  </div>
@@ -342,113 +343,6 @@
 	  	<p class="mb-0"><img src="images/viajanet-logo-footer.png" width="150px;"></p>
 	  	<footer><span class="card-title-small" style="color:#3f3f3f; font-weight:800; letter-spacing:1px; text-transform:uppercase; font-size:9px;">@ViajaNet 2019. Todos os direitos reservados.</span></footer>
 	</blockquote>
-
-	<script>
-
-	jQuery(document).ready(function($){
-	  
-	  function customDataSuccess(data){
-	    
-	    var content = "";
-	    
-	    for(var i in data["items"]){
-	       
-	       var img 			= data["items"][i].Image;
-	       var description 	= data["items"][i].Text;
-	       var operadora 	= data["items"][i].Operadora;
-	       var link 		= data["items"][i].Url;
-
-			content += '<div class="item" style="padding:20px;">';
-			content += '<div class="card">';
-			content += '<div class="card-img-top">';
-			content += '<a href="' + link +'" target="_blank">';
-			content += '<img  src="' + img +'" width="100%" alt="">';
-
-			switch(operadora){
-
-				case 'LATAM':
-				content += '<div class="card-img-top-brands"><img class="card-img-top-brands-label" src="./images/LABEL-LATAM.png" alt=""></div>';
-				break;
-
-				case 'GOL':
-				content += '<div class="card-img-top-brands"><img class="card-img-top-brands-label" src="./images/LABEL-GOL.png" alt=""></div>';
-				break;
-
-				case 'AVIANCA':
-				content += '<div class="card-img-top-brands"><img class="card-img-top-brands-label" src="./images/LABEL-AVIANCA.png" alt=""></div>';
-				break;
-
-				case 'AZUL':
-				content += '<div class="card-img-top-brands"><img class="card-img-top-brands-label" src="./images/LABEL-AZUL.png" alt=""></div>';
-				break;
-
-			}
-
-			content += '</a>';
-			content += '</div>';
-			content += '<div class="card-body">';
-			content += '<div class="row">';
-			content += '<div class="col-8 col-md-8">';
-			content += '<div class="col-12 col-md-12 p-0">';
-
-			
-
-			content += '<h5 class="card-title-small">' + description.substring(12, 26) +'</h5>';
-			content += '</div>';
-			content += '<div class="col-12 col-md-12 p-0">';
-			content += '<h5 class="card-title-big">' + description.substring(26, description.length) +'</h5>';
-			
-			content += '</div>';
-			content += '</div>';
-			content += '<div class="col-4 col-md-4 pb-40" style="text-align:right; padding-right:10px;">';
-
-			switch(operadora){
-
-				case 'LATAM':
-				content += '<img src="./images/brand-latam.png" width="40px">';
-				break;
-
-				case 'GOL':
-				content += '<img src="./images/brand-gol.png" width="40px">';
-				break;
-
-				case 'AVIANCA':
-				content += '<img src="./images/brand-avianca.png" width="40px">';
-				break;
-
-				case 'AZUL':
-				content += '<img src="./images/brand-azul.png" width="40px">';
-				break;
-
-			}			
-
-			content += '</div>';
-			content += '</div>';
-			content += '<p class="card-text">' + description +'</p>';
-			content += '<div class="col-12 col-md-12 p-0">';
-			content += '<div class="col-12 col-md-12 p-0" style="float:left;">';
-			content += '<a href="' + link +'" class="btn btn-block border-default" style="text-align:center"><span style="font-size:13px; line-height:10px;">A partir de </h4><span style="font-size:22px; font-weight:800;">R$ 256,00</h2></a>';
-			content += '</div>';
-			content += '<div class="col-12 col-md-12 p-0" style="float:left;">';
-			content += '<a href="' + link +'" class="btn btn-primary btn-block" style="font-weight:800; letter-spacing:2px; text-transform:uppercase; font-size: 12px; padding:10px;">COMPRAR AGORA!</a>';
-			content += '</div>';
-			content += '<div class="col-12 col-md-12 p-0" style="float:left;">';
-			content += '<a href="' + link +'" class="btn btn-default border btn-block" style="font-weight:800; letter-spacing:2px; text-transform:uppercase; font-size: 12px; padding:10px;">+ MAIS INFORMAÇÕES</a>';
-			content += '</div>';
-			content += '</div>';
-			content += '</div>';
-			content += '</div>';
-			content += '</div>';	 
-
-	    }
-
-	    //$("#owl-carousel").html(content); PRINT CONTENT IN PAGE
-	  
-	  }
-
-	});
-
-    </script>
 
     <script type="text/javascript">
 
