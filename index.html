@@ -27,80 +27,7 @@
 	<link rel="stylesheet" href="./autocomplete/easy-autocomplete.themes.css">
 
 	<script src="./autocomplete/jquery.easy-autocomplete.js"></script>
-
-    <style>
-
-		.navbar-nav .nav-link {
-		    padding-right: 0;
-		    padding-left: 0;
-		}
-
-		.nav-link {
-		    display: block;
-		    padding: 0.5rem 2rem;
-		    font-size: 12px;
-		    font-weight: 800;
-		    letter-spacing: 1px;
-		}
-
-		.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-		    color: #fff;
-		    background-color: #006ac5;
-		    border-color: #006ac5 #006ac5 #006ac5;
-		}
-
-		.tab-content .tab-pane {
-			background-color: #006ac5;
-			padding:30px;
-			border-color: #006ac5 #006ac5 #006ac5;
-		}
-
-		.nav-tabs {
-		    border-bottom: 1px solid #006ac5;
-		}
-
-        .dvPulsate {
-            -webkit-animation: dvPulsate .8s infinite cubic-bezier(.53, .22, .85, .58) alternate;
-            animation: dvPulsate .8s infinite cubic-bezier(.53, .22, .85, .58) alternate
-        }
-        
-        @-webkit-keyframes dvPulsate {
-            from {
-                -webkit-transform: scale(1);
-                transform: scale(1);
-                -webkit-animation-timing-function: cubic-bezier(.53, .22, .85, .58);
-                animation-timing-function: cubic-bezier(.53, .22, .85, .58);
-                opacity: 1
-            }
-            to {
-                -webkit-transform: scale(.95);
-                transform: scale(.95);
-                -webkit-animation-timing-function: cubic-bezier(.53, .22, .85, .58);
-                animation-timing-function: cubic-bezier(.53, .22, .85, .58);
-                opacity: .75
-            }
-        }
-        
-        /* LogoPulse */
-
-        @keyframes dvPulsate {
-            from {
-                -webkit-transform: scale(1);
-                transform: scale(1);
-                -webkit-animation-timing-function: cubic-bezier(.53, .22, .85, .58);
-                animation-timing-function: cubic-bezier(.53, .22, .85, .58);
-                opacity: 1
-            }
-            to {
-                -webkit-transform: scale(.95);
-                transform: scale(.95);
-                -webkit-animation-timing-function: cubic-bezier(.53, .22, .85, .58);
-                animation-timing-function: cubic-bezier(.53, .22, .85, .58);
-                opacity: .75
-            }
-        }
-
-    </style>
+	<link rel="stylesheet" href="./css/box-search.css">
 
 </head>
 
@@ -250,61 +177,61 @@
 			<div class="form-row">
 			
 			<div class="col-6 col-md-3 mb-3">
-			<label for="validationCustom03">Data de Ida</label>
-			<input type="text" class="form-control" id="validationCustom03" placeholder="Escolha a data..." required>
-			<div class="invalid-feedback">
-			Escolha uma data de ida.
-			</div>
+				<label for="validationCustom03">Data de Ida</label>
+				<input type="text" class="form-control" id="validationCustom03" placeholder="Escolha a data..." required>
+				<div class="invalid-feedback">
+				Escolha uma data de ida.
+				</div>
 			</div>
 
 			<div class="col-6 col-md-3 mb-3">
-			<label for="validationCustom03">Data de Volta</label>
-			<input type="text" class="form-control" id="validationCustom03" placeholder="Escolha a data..." required>
-			<div class="invalid-feedback">
-			Escolha uma data de volta.
-			</div>
-			</div>
-
-			<div class="col-4 col-md-2 mb-2">
-			<label for="validationCustom04">Adultos</label>
-		    <select class="form-control" id="exampleFormControlSelect1">
-		      <option>1</option>
-		      <option>2</option>
-		      <option>3</option>
-		      <option>4</option>
-		      <option>5</option>
-		    </select>
-		    <div class="invalid-feedback">
-			Quantos adultos?
-			</div>
+				<label for="validationCustom03">Data de Volta</label>
+				<input type="text" class="form-control" id="validationCustom03" placeholder="Escolha a data..." required>
+				<div class="invalid-feedback">
+				Escolha uma data de volta.
+				</div>
 			</div>
 
 			<div class="col-4 col-md-2 mb-2">
-			<label for="validationCustom04">Crianças</label>
-		    <select class="form-control" id="exampleFormControlSelect1">
-		      <option>1</option>
-		      <option>2</option>
-		      <option>3</option>
-		      <option>4</option>
-		      <option>5</option>
-		    </select>
-		    <div class="invalid-feedback">
-			Quantas crianças?
-			</div>
+				<label for="validationCustom04">Adultos</label>
+			    <select class="form-control" id="exampleFormControlSelect1">
+			      <option>1</option>
+			      <option>2</option>
+			      <option>3</option>
+			      <option>4</option>
+			      <option>5</option>
+			    </select>
+			    <div class="invalid-feedback">
+				Quantos adultos?
+				</div>
 			</div>
 
 			<div class="col-4 col-md-2 mb-2">
-			<label for="validationCustom05">Bebês</label>
-		    <select class="form-control" id="exampleFormControlSelect1">
-		      <option>1</option>
-		      <option>2</option>
-		      <option>3</option>
-		      <option>4</option>
-		      <option>5</option>
-		    </select>
-		    <div class="invalid-feedback">
-			Quantos bebês?
+				<label for="validationCustom04">Crianças</label>
+			    <select class="form-control" id="exampleFormControlSelect1">
+			      <option>1</option>
+			      <option>2</option>
+			      <option>3</option>
+			      <option>4</option>
+			      <option>5</option>
+			    </select>
+			    <div class="invalid-feedback">
+				Quantas crianças?
+				</div>
 			</div>
+
+			<div class="col-4 col-md-2 mb-2">
+				<label for="validationCustom05">Bebês</label>
+			    <select class="form-control" id="exampleFormControlSelect1">
+			      <option>1</option>
+			      <option>2</option>
+			      <option>3</option>
+			      <option>4</option>
+			      <option>5</option>
+			    </select>
+			    <div class="invalid-feedback">
+				Quantos bebês?
+				</div>
 			</div>
 
 			</div>
