@@ -84,7 +84,7 @@
 
 		  	<h6>Encontre os melhores preços e boa viagem!</h6><br>
 
-			<form class="needs-validation" novalidate>
+			<form class="needs-validation" action="https://www.viajanet.com.br/busca/passagens/voos#/SAO/PAR/RT/25-02-2020/03-03-2020/-/-/-/1/0/0/-/-/BRL/-">
 			
 			<div class="form-row">			
 			<div class="form-group">
@@ -183,7 +183,7 @@
 
 			</div>
 			
-			<button class="btn btn-primary btn-block btn-warning" type="submit">Pesquisar</button>
+			<button class="btn btn-primary btn-block btn-warning" type="submit" id="BtnRegister">Pesquisar</button>
 
 			</form>
 
@@ -207,29 +207,6 @@
 		    x.className = "topnav";
 		  }
 		}
-
-		(function() {
-		'use strict';
-		window.addEventListener('load', function() {
-			
-			var forms = document.getElementsByClassName('needs-validation');
-			var validation = Array.prototype.filter.call(forms, function(form) {
-				form.addEventListener('submit', function(event) {
-					if (form.checkValidity() === false) {
-		  				
-		  				event.preventDefault();
-		  				event.stopPropagation();
-
-		  				param1 = "BRA"; //document.getElementById('validationCustom01').value
-		  				param2 = "FEN"; //document.getElementById('validationCustom01').value
-
-		  				location.href='https://www.viajanet.com.br/busca/passagens/voos#/'+ param1 + '/'+ param2 +'/RT/25-02-2020/03-03-2020/-/-/-/1/0/0/-/-/BRL/-'
-					}
-					form.classList.add('was-validated');
-					}, false);
-				});
-			}, false);
-		})();
 
     </script>
 
